@@ -2,7 +2,8 @@
 # PyTorch Cheat Sheet 🚀
 
 ## **1. Tensors 🛠️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import torch
 
 # Create tensors
@@ -12,10 +13,11 @@ z = torch.ones_like(y)
 
 # Operations
 result = x + y
-
 ```
+
 ## **2. Neural Networks 🧠**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import torch.nn as nn
 
 # Define a simple neural network
@@ -29,10 +31,11 @@ model = SimpleNN()
 
 # Forward pass
 output = model(torch.randn(1, 10))
-
 ```
+
 ## **3. Optimization 🔄**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import torch.optim as optim
 
 # Define optimizer and loss function
@@ -44,10 +47,11 @@ optimizer.zero_grad()
 loss = criterion(output, target)
 loss.backward()
 optimizer.step()
-
 ```
+
 ## **4. Data Loading 📂**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from torch.utils.data import DataLoader, Dataset
 
 # Define a custom dataset
@@ -58,29 +62,32 @@ class CustomDataset(Dataset):
 # Create DataLoader
 dataset = CustomDataset(data)
 dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
-
 ```
+
 ## **5. GPU Acceleration 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Check for GPU availability
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Move model and tensors to GPU
 model.to(device)
 x = x.to(device)
-
 ```
+
 ## **6. Save and Load Models 📤 📥**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Save model
 torch.save(model.state_dict(), 'model.pth')
 
 # Load model
 model.load_state_dict(torch.load('model.pth'))
-
 ```
+
 ## **7. Training Loop 🔄**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Training loop
 for epoch in range(num_epochs):
     for batch in dataloader:
@@ -92,15 +99,12 @@ for epoch in range(num_epochs):
         loss = criterion(outputs, labels)
         loss.backward()
         optimizer.step()
-
 ```
-_____________________________________________________________________________________________
 
 
 ## **8. Model Evaluation 📊**
 
 ```python
-
 # Evaluation mode
 model.eval()
 
@@ -114,10 +118,11 @@ with torch.no_grad():
 
 # Set back to training mode
 model.train()
-
 ```
+
 ## **9. Model Fine-Tuning 🛠️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Fine-tuning an existing model
 pretrained_model = torchvision.models.resnet18(pretrained=True)
 for param in pretrained_model.parameters():
@@ -127,29 +132,32 @@ for param in pretrained_model.parameters():
 pretrained_model.fc = nn.Linear(512, num_classes)
 
 # Train the modified model
-
 ```
+
 ## **10. Save and Load Entire Models with Architecture 🏛️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Save entire model with architecture
 torch.save(model, 'full_model.pth')
 
 # Load entire model
 loaded_model = torch.load('full_model.pth')
-
 ```
+
 ## **11. Visualizing Data with Matplotlib 📊📈**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import matplotlib.pyplot as plt
 
 # Visualize data
 plt.imshow(tensor_image.permute(1, 2, 0).numpy())
 plt.title("Sample Image")
 plt.show()
-
 ```
+
 ## **12. Learning Rate Scheduling 📈**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from torch.optim.lr_scheduler import StepLR
 
 # Scheduler
@@ -159,13 +167,13 @@ scheduler = StepLR(optimizer, step_size=5, gamma=0.1)
 for epoch in range(num_epochs):
     scheduler.step()
     # Rest of the training loop
-
 ```
+
 ## **13. GradCAM for Model Interpretability 🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # GradCAM implementation
 # (Check torchvision for a complete implementation)
-
 ```
 
 
@@ -180,10 +188,11 @@ class CustomLoss(nn.Module):
 
     def forward(self, inputs, targets):
         return torch.mean(self.weight * (inputs - targets) ** 2)
-
 ```
+
 ## **15. Data Augmentation with torchvision 🖼️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import torchvision.transforms as transforms
 
 # Data augmentation
@@ -192,10 +201,11 @@ transform = transforms.Compose([
     transforms.RandomHorizontalFlip(),
     transforms.ToTensor(),
 ])
-
 ```
+
 ## **16. Early Stopping in Training Loop 🛑**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from sklearn.metrics import accuracy_score
 
 # Early stopping
@@ -219,18 +229,20 @@ for epoch in range(num_epochs):
     if counter == patience:
         print("Early stopping!")
         break
-
 ```
+
 ## **17. Model Summary with torchsummary 📋**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from torchsummary import summary
 
 # Display model summary
 summary(model, input_size=(channels, height, width))
-
 ```
+
 ## **18. Hyperparameter Tuning with Optuna 🎛️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import optuna
 
 # Define the objective function
@@ -246,25 +258,27 @@ def objective(trial):
 # Run Optuna optimization
 study = optuna.create_study(direction='minimize')
 study.optimize(objective, n_trials=10)
-
 ```
+
 ## **19. Loading Pre-trained Models from torchvision 🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import torchvision.models as models
 
 # Load pre-trained ResNet model
 pretrained_resnet = models.resnet18(pretrained=True)
-
 ```
+
 ## **20. Handling Imbalanced Datasets 🚧**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from torch.utils.data import WeightedRandomSampler
 
 # Create a weighted sampler for imbalanced datasets
 class_weights = compute_class_weights(dataset)
 sampler = WeightedRandomSampler(class_weights, len(dataset), replacement=True)
-
 ```
+
 
 ## **21. Transfer Learning with Feature Extraction 🔄**
 
@@ -278,10 +292,11 @@ for param in pretrained_model.parameters():
 pretrained_model.fc = nn.Linear(512, num_classes)
 
 # Train the model on your specific task
-
 ```
+
 ## **22. Mixed Precision Training 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from torch.cuda.amp import autocast, GradScaler
 
 # Mixed precision training
@@ -301,10 +316,11 @@ for epoch in range(num_epochs):
         scaler.scale(loss).backward()
         scaler.step(optimizer)
         scaler.update()
-
 ```
+
 ## **23. Distributed Training with `torch.nn.parallel.DistributedDataParallel` 🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Distributed training setup
 import torch.distributed as dist
 
@@ -324,29 +340,32 @@ for epoch in range(num_epochs):
         loss = criterion(outputs, labels)
         loss.backward()
         optimizer.step()
-
 ```
+
 ## **24. Custom Learning Rate Schedulers 📈**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from torch.optim.lr_scheduler import LambdaLR
 
 # Custom learning rate scheduler
 lambda_lr = lambda epoch: 0.95 ** epoch
 scheduler = LambdaLR(optimizer, lr_lambda=lambda_lr)
-
 ```
+
 ## **25. Model Quantization 📊**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import torch.quantization as quantization
 
 # Quantize the model
 quantized_model = quantization.quantize_dynamic(
     model, {nn.Linear}, dtype=torch.qint8
 )
-
 ```
+
 ## **26. Saving and Loading Checkpoints during Training 📁**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Save and load checkpoints during training
 checkpoint = {
     'epoch': epoch,
@@ -362,16 +381,17 @@ torch.save(checkpoint, 'checkpoint.pth')
 checkpoint = torch.load('checkpoint.pth')
 model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-
 ```
+
 ## **27. One Cycle Learning Rate Policy 🔄📈**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from torch.optim.lr_scheduler import OneCycleLR
 
 # One Cycle Learning Rate Policy
 scheduler = OneCycleLR(optimizer, max_lr=0.1, total_steps=epochs * len(dataloader))
-
 ```
+
 
 ## **28. TorchScript for Model Serialization 🚀**
 
@@ -380,10 +400,11 @@ scheduler = OneCycleLR(optimizer, max_lr=0.1, total_steps=epochs * len(dataloade
 scripted_model = torch.jit.script(model)
 scripted_model.save('scripted_model.pt')
 loaded_scripted_model = torch.jit.load('scripted_model.pt')
-
 ```
+
 ## **29. Handling Time Series Data with LSTM 📈🔄**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Example LSTM model for time series data
 class LSTMModel(nn.Module):
     def __init__(self, input_size, hidden_size, num_layers, output_size):
@@ -395,16 +416,18 @@ class LSTMModel(nn.Module):
         out, _ = self.lstm(x)
         out = self.fc(out[:, -1, :])
         return out
-
 ```
+
 ## **30. Data Parallelism with `torch.nn.DataParallel` 🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Data parallelism with DataParallel
 model = nn.DataParallel(model)
-
 ```
+
 ## **31. Hyperparameter Sweeping with `torchbearer` 🧹**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Hyperparameter sweeping with torchbearer
 from torchbearer import Trial
 
@@ -414,10 +437,11 @@ trial = Trial(model, optimizer, criterion, metrics=['accuracy'])
 
 # Run the trial with hyperparameter sweeping
 results = trial.with_generators(train_generator, val_generator, test_generator).to('cuda').run(epochs=5)
-
 ```
+
 ## **32. Using `torchvision` Transforms for Image Augmentation 🖼️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import torchvision.transforms as transforms
 
 # Image augmentation using torchvision transforms
@@ -428,10 +452,11 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
-
 ```
+
 ## **33. Monitoring Training with TensorBoard 📊**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from torch.utils.tensorboard import SummaryWriter
 
 # TensorBoard setup
@@ -444,15 +469,18 @@ for epoch in range(num_epochs):
     writer.add_scalar('Accuracy/Train', train_accuracy, global_step=epoch)
 
 # Launch TensorBoard: tensorboard --logdir=runs
-
 ```
+
 ## **34. Handling Class Imbalance with Loss Weights 🚧**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Handle class imbalance with loss weights
 class_weights = torch.tensor([2.0, 1.0, 0.5])
 criterion = nn.CrossEntropyLoss(weight=class_weights)
-
 ```
+
+
+
 
 ## **35. Loading and Preprocessing Text Data with `torchtext` 📝**
 
@@ -472,10 +500,11 @@ TEXT.build_vocab(train_data, max_size=10000, vectors='glove.6B.100d')
 train_iterator, test_iterator = BucketIterator.splits(
     (train_data, test_data), batch_size=64, sort=False
 )
-
 ```
+
 ## **36. Hyperparameter Search with `optuna` 🎛️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import optuna
 
 # Hyperparameter search with optuna
@@ -492,10 +521,11 @@ def objective(trial):
 
 study = optuna.create_study(direction='minimize')
 study.optimize(objective, n_trials=10)
-
 ```
+
 ## **37. Loading and Fine-tuning GPT-3 Models with `transformers` 🤖**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
 # Loading and fine-tuning GPT-3 models
@@ -507,20 +537,22 @@ model = GPT2LMHeadModel.from_pretrained('gpt2')
 
 # Generate text with the fine-tuned model
 generated_text = model.generate(input_ids, max_length=50, num_beams=5)
-
 ```
+
 ## **38. Handling Long Sequences with `pack_padded_sequence` 📏**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
 # Handling long sequences with pack_padded_sequence
 packed_sequence = pack_padded_sequence(embedded_input, lengths, batch_first=True)
 output, _ = lstm(packed_sequence)
 padded_sequence, lengths = pad_packed_sequence(output, batch_first=True)
-
 ```
+
 ## **39. Using `torchvision` for Image Classification and Pre-trained Models 🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 import torchvision.models as models
 import torchvision.transforms as transforms
 
@@ -532,10 +564,11 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
-
 ```
+
 ## **40. Implementing Custom Loss Functions with Class Weights 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Custom loss function with class weights
 class CustomLoss(nn.Module):
     def __init__(self, class_weights):
@@ -545,7 +578,6 @@ class CustomLoss(nn.Module):
     def forward(self, inputs, targets):
         loss = F.cross_entropy(inputs, targets, weight=self.class_weights)
         return loss
-
 ```
 
 ## **41. TorchServe for Model Deployment 🚀🌐**
@@ -555,10 +587,11 @@ class CustomLoss(nn.Module):
 # Install TorchServe: pip install torchserve torch-model-archiver
 # Create a model archive: torch-model-archiver --model-name=resnet --version=1.0 --model-file=model.py --serialized-file=model.pth --export-path=model_store --extra-files index_to_name.json
 # Start TorchServe: torchserve --start --ncs --model-store=model_store --models=resnet=1.0
-
 ```
+
 ## **42. Training with Mixed Data Types (e.g., Images and Text) 🖼️📝**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Example: Training with mixed data types
 class MixedDataModel(nn.Module):
     def __init__(self):
@@ -573,10 +606,11 @@ class MixedDataModel(nn.Module):
         combined_features = torch.cat((image_features, text_features[-1]), dim=1)
         output = self.fc(combined_features)
         return output
-
 ```
+
 ## **43. Implementing a Custom Optimizer 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Implementing a custom optimizer
 class CustomOptimizer(torch.optim.Optimizer):
     def __init__(self, params, lr=0.001, momentum=0.9):
@@ -591,10 +625,11 @@ class CustomOptimizer(torch.optim.Optimizer):
                 grad = p.grad.data
                 p.data.add_(-group['lr'], grad)
         return loss
-
 ```
+
 ## **44. Time Series Forecasting with Seq2Seq Models 📈🔄**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Time series forecasting with Seq2Seq models
 class Seq2SeqModel(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
@@ -606,10 +641,11 @@ class Seq2SeqModel(nn.Module):
         encoder_output, (hidden, cell) = self.encoder(input_sequence)
         decoder_output, _ = self.decoder(encoder_output[-1].unsqueeze(0))
         return decoder_output
-
 ```
+
 ## **45. Learning Rate Finder for Optimal Learning Rates 📈**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Learning rate finder for optimal learning rates
 from torch_lr_finder import LRFinder
 
@@ -619,10 +655,11 @@ optimizer = torch.optim.SGD(model.parameters(), lr=1e-7)
 lr_finder = LRFinder(model, optimizer, criterion)
 lr_finder.range_test(train_loader, end_lr=100, num_iter=100)
 lr_finder.plot()
-
 ```
+
 ## **46. Handling Missing Data with PyTorch DataLoaders 🚧**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Handling missing data with PyTorch DataLoaders
 class CustomDataset(Dataset):
     def __init__(self, data, targets):
@@ -636,8 +673,8 @@ class CustomDataset(Dataset):
 
     def __len__(self):
         return len(self.data)
-
 ```
+
 
 ## **47. Dynamic Computational Graphs with `torch.autograd` 🔄**
 
@@ -649,10 +686,11 @@ y = x**2 + 2*x + 1
 # Backward pass and gradient
 y.backward()
 print(x.grad)  # Access gradient
-
 ```
+
 ## **48. Gradual Model Unfreezing for Transfer Learning 🔄🔓**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Gradual model unfreezing for transfer learning
 for param in model.parameters():
     param.requires_grad = False
@@ -660,10 +698,11 @@ for param in model.parameters():
 # Unfreeze specific layers
 for param in model.fc.parameters():
     param.requires_grad = True
-
 ```
+
 ## **49. Using PyTorch for Reinforcement Learning 🎮**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Using PyTorch for Reinforcement Learning
 import torch
 import torch.nn as nn
@@ -683,10 +722,11 @@ class QNetwork(nn.Module):
 
 # Training loop with a Q-network and experience replay
 # ...
-
 ```
+
 ## **50. Using PyTorch Ignite for Training Loop Abstraction 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Using PyTorch Ignite for Training Loop Abstraction
 from ignite.engine import Engine, Events
 from ignite.metrics import Accuracy, Loss
@@ -710,10 +750,11 @@ Loss(criterion).attach(trainer, 'loss')
 
 # Run the training loop
 trainer.run(train_loader, max_epochs=num_epochs)
-
 ```
+
 ## **51. PyTorch Lightning for High-Level Abstractions ⚡**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Using PyTorch Lightning for High-Level Abstractions
 import pytorch_lightning as pl
 
@@ -736,10 +777,11 @@ class LightningModel(pl.LightningModule):
 
     def configure_optimizers(self):
         return self.optimizer
-
 ```
+
 ## **52. Enhancing Data Augmentation with `albumentations` 🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Enhancing Data Augmentation with albumentations
 import albumentations as A
 
@@ -751,8 +793,11 @@ augmentation = A.Compose([
     A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
     ToTensorV2(),
 ])
-
 ```
+
+---
+
+These additions cover dynamic computational graphs, gradual model unfreezing, reinforcement learning, training loop abstractions with Ignite, high-level abstractions with PyTorch Lightning, and data augmentation with `albumentations`.🚀🔥
 
 ## **53. Model Interpretability with Captum 🧐**
 
@@ -769,10 +814,11 @@ attributions = integrated_gradients.attribute(input_tensor)
 
 # Visualize attributions
 visualization.visualize_image_attr(attributions[0], original_image=input_tensor[0])
-
 ```
+
 ## **54. Parallelizing Data Loading with `torch.utils.data.DataLoader` 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Parallelizing Data Loading with torch.utils.data.DataLoader
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
@@ -783,22 +829,25 @@ dataset = datasets.MNIST(root='./data', train=True, download=True, transform=tra
 
 # Parallelized data loading
 dataloader = DataLoader(dataset, batch_size=64, shuffle=True, num_workers=4)
-
 ```
+
 ## **55. Multi-GPU Training with `torch.nn.DataParallel` 🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Multi-GPU Training with torch.nn.DataParallel
 model = nn.DataParallel(model)
-
 ```
+
 ## **56. Gradient Clipping to Prevent Exploding Gradients 🚑**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Gradient Clipping to Prevent Exploding Gradients
 torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
-
 ```
+
 ## **57. Efficient Hyperparameter Search with `Ray Tune` 🎛️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Efficient Hyperparameter Search with Ray Tune
 from ray import tune
 
@@ -818,35 +867,42 @@ config_space = {
 
 # Run hyperparameter search
 analysis = tune.run(train_function, config=config_space)
-
 ```
+
 ## **58. Applying Self-Supervised Learning Techniques 🤖**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Applying Self-Supervised Learning Techniques
 # Example: SimCLR for self-supervised learning
 # Implementation details: https://github.com/sthalles/SimCLR
-
 ```
+
 ## **59. PyTorch Mobile for Deploying Models on Mobile Devices 📱**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # PyTorch Mobile for Deploying Models on Mobile Devices
 # Convert model to TorchScript for mobile deployment
 mobile_model = torch.jit.script(model)
 
 # Save the TorchScript model
 mobile_model.save('mobile_model.pt')
-
 ```
+
 ## **60. Handling Class Imbalance with `WeightedRandomSampler` 🚧**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Handling Class Imbalance with WeightedRandomSampler
 from torch.utils.data import WeightedRandomSampler
 
 # Calculate class weights
 class_weights = [1.0, 2.0, 0.5]
 weighted_sampler = WeightedRandomSampler(class_weights, len(dataset), replacement=True)
-
 ```
+
+---
+
+These additions cover model interpretability with Captum, parallelizing data loading, multi-GPU training, gradient clipping, efficient hyperparameter search with Ray Tune, self-supervised learning techniques, PyTorch Mobile for mobile deployment, and handling class imbalance with `WeightedRandomSampler`. 🚀🔥
+
 
 ## **61. Using `torch.distributed` for Distributed Training 🌐**
 
@@ -860,10 +916,11 @@ dist.init_process_group('nccl', init_method='env://')
 
 # Model parallelism with DistributedDataParallel
 model = DistributedDataParallel(model)
-
 ```
+
 ## **62. Efficient Loading of Large Datasets with `torch.utils.data.IterableDataset` 📂**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Efficient Loading of Large Datasets with torch.utils.data.IterableDataset
 from torch.utils.data import IterableDataset
 
@@ -876,17 +933,19 @@ class LargeDataset(IterableDataset):
 # Use with DataLoader
 large_dataset = LargeDataset()
 dataloader = DataLoader(large_dataset, batch_size=64, num_workers=4)
-
 ```
+
 ## **63. Accelerating Inference with `torch.jit.trace` 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Accelerating Inference with torch.jit.trace
 traced_model = torch.jit.trace(model, torch.randn(1, 3, 224, 224))
 output = traced_model(input_tensor)
-
 ```
+
 ## **64. Handling Long Sequences with Packed Sequence and `torch.nn.utils.rnn` 📏**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Handling Long Sequences with Packed Sequence and torch.nn.utils.rnn
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
@@ -894,17 +953,19 @@ from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 packed_sequence = pack_padded_sequence(input_tensor, lengths, batch_first=True)
 output, _ = lstm(packed_sequence)
 padded_sequence, lengths = pad_packed_sequence(output, batch_first=True)
-
 ```
+
 ## **65. Collaborative Training with Federated Learning 🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Collaborative Training with Federated Learning
 # PySyft library can be used for federated learning
 # Example: https://github.com/OpenMined/PySyft
-
 ```
+
 ## **66. Hyperparameter Optimization with `Optuna` and `Ray Tune` Integration 🎛️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Hyperparameter Optimization with Optuna and Ray Tune Integration
 import optuna
 from ray.tune.integration.optuna import OptunaSearch
@@ -918,10 +979,11 @@ def objective(trial):
 study = optuna.create_study(direction='minimize')
 tune_search = OptunaSearch(study_name='optuna_tune', metric='loss', mode='min')
 tune.run(objective, search_alg=tune_search, num_samples=10)
-
 ```
+
 ## **67. Enhancing Training Loop with `fastai` Integration 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Enhancing Training Loop with fastai Integration
 from fastai.vision.all import Learner, DataLoaders
 
@@ -930,8 +992,11 @@ fastai_dataloaders = DataLoaders.from_dataloader(train_loader, valid_loader)
 
 # Create a Learner with fastai
 learner = Learner(fastai_dataloaders, model, loss_func=criterion, metrics=[accuracy])
-
 ```
+
+---
+
+These additions cover distributed training, efficient loading of large datasets, accelerating inference with `torch.jit.trace`, handling long sequences with packed sequence, federated learning, hyperparameter optimization with Optuna and Ray Tune integration, and enhancing the training loop with `fastai` integration. 🚀🔥
 
 ## **68. Progressive Resizing for Improved Model Performance 📏🖼️**
 
@@ -939,10 +1004,11 @@ learner = Learner(fastai_dataloaders, model, loss_func=criterion, metrics=[accur
 # Progressive Resizing for Improved Model Performance
 # Train with small images, then gradually increase image size
 # Useful for transfer learning
-
 ```
+
 ## **69. Label Smoothing for Regularization 🎨**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Label Smoothing for Regularization
 class LabelSmoothingLoss(nn.Module):
     def __init__(self, smoothing=0.1, num_classes=10):
@@ -958,10 +1024,11 @@ class LabelSmoothingLoss(nn.Module):
             true_dist.fill_(self.smoothing / (self.num_classes - 1))
             true_dist.scatter_(1, target.data.unsqueeze(1), self.confidence)
         return torch.mean(torch.sum(-true_dist * pred, dim=-1))
-
 ```
+
 ## **70. MixUp Augmentation for Improved Generalization 🖼️🔄**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # MixUp Augmentation for Improved Generalization
 def mixup_data(x, y, alpha=0.2):
     lam = np.random.beta(alpha, alpha)
@@ -970,26 +1037,29 @@ def mixup_data(x, y, alpha=0.2):
     mixed_x = lam * x + (1 - lam) * x[index, :]
     y_a, y_b = y, y[index]
     return mixed_x, y_a, y_b, lam
-
 ```
+
 ## **71. Knowledge Distillation for Model Compression 📚🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Knowledge Distillation for Model Compression
 # Example: https://github.com/peterliht/knowledge-distillation-pytorch
-
 ```
+
 ## **72. Using `torch.nn.functional` for Custom Activation Functions 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Using torch.nn.functional for Custom Activation Functions
 import torch.nn.functional as F
 
 # Example: Mish Activation
 def mish(x):
     return x * torch.tanh(F.softplus(x))
-
 ```
+
 ## **73. Data Preprocessing with `torchtext` and `torchvision` Transforms 📝🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Data Preprocessing with torchtext and torchvision Transforms
 # Example: Combining text and image data preprocessing
 # ...
@@ -1003,10 +1073,11 @@ image_transform = transforms.Compose([
 
 # Transforms for text data
 text_transform = data.Field(tokenize='spacy', tokenizer_language='en_core_web_sm')
-
 ```
+
 ## **74. Efficient Deployment with TorchServe and TorchScript 🚀🏛️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Efficient Deployment with TorchServe and TorchScript
 # Example: Convert model to TorchScript
 traced_model = torch.jit.trace(model, torch.randn(1, 3, 224, 224))
@@ -1014,10 +1085,11 @@ traced_model.save('traced_model.pth')
 
 # Deploy with TorchServe
 # ...
-
 ```
+
 ## **75. Building Custom Optimizers with `torch.optim.Optimizer` 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Building Custom Optimizers with torch.optim.Optimizer
 class CustomOptimizer(torch.optim.Optimizer):
     def __init__(self, params, lr=0.001, betas=(0.9, 0.999), eps=1e-8):
@@ -1032,8 +1104,11 @@ class CustomOptimizer(torch.optim.Optimizer):
                 grad = p.grad.data
                 # Custom optimization step
         return loss
-
 ```
+
+---
+
+These additions cover progressive resizing, label smoothing, MixUp augmentation, knowledge distillation, custom activation functions, data preprocessing with `torchtext` and `torchvision` transforms, efficient deployment with TorchServe and TorchScript, and building custom optimizers with `torch.optim.Optimizer`. 🚀🔥
 
 ## **76. Using `torch.distributions` for Probabilistic Models 📊🔍**
 
@@ -1048,17 +1123,19 @@ normal_distribution = dist.Normal(mu, sigma)
 
 # Sample from the distribution
 sample = normal_distribution.sample()
-
 ```
+
 ## **77. Sparse Operations with `torch.sparse` Module 🕸️**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Sparse Operations with torch.sparse Module
 sparse_tensor = torch.sparse.FloatTensor(indices, values, size)
 dense_tensor = torch.sparse.sparse_add(sparse_tensor1, sparse_tensor2)
-
 ```
+
 ## **78. PyTorch Profiler for Performance Analysis 🚀🔍**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # PyTorch Profiler for Performance Analysis
 with torch.autograd.profiler.profile(use_cuda=True) as prof:
     # Your code to profile
@@ -1066,16 +1143,18 @@ with torch.autograd.profiler.profile(use_cuda=True) as prof:
 
 # Print profiler results
 print(prof.key_averages().table(sort_by="self_cuda_time_total", row_limit=10))
-
 ```
+
 ## **79. Handling NaN/Inf Gradients with `torch.nn.utils.clip_grad_value_` 🚑**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Handling NaN/Inf Gradients with torch.nn.utils.clip_grad_value_
 torch.nn.utils.clip_grad_value_(model.parameters(), clip_value=1.0)
-
 ```
+
 ## **80. Training with Mixed Precision using `torch.cuda.amp` 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Training with Mixed Precision using torch.cuda.amp
 from torch.cuda.amp import autocast, GradScaler
 
@@ -1095,26 +1174,33 @@ for epoch in range(num_epochs):
         scaler.scale(loss).backward()
         scaler.step(optimizer)
         scaler.update()
-
 ```
+
 ## **81. PyTorch Geometric for Graph Neural Networks 🌐🔍**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # PyTorch Geometric for Graph Neural Networks
 # Example: https://pytorch-geometric.readthedocs.io/en/latest/notes/introduction.html
-
 ```
+
 ## **82. Handling Time Series Data with `tsai` Library 📈🔄**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Handling Time Series Data with tsai Library
 # Example: https://github.com/timeseriesAI/tsai
-
 ```
+
 ## **83. Quantization-Aware Training for Model Quantization 🚀📊**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Quantization-Aware Training for Model Quantization
 # Example: https://pytorch.org/docs/stable/quantization.html#quantization-aware-training
-
 ```
+
+---
+
+These additions cover probabilistic models with `torch.distributions`, sparse operations with `torch.sparse`, PyTorch Profiler for performance analysis, handling NaN/Inf gradients, mixed-precision training with `torch.cuda.amp`, Graph Neural Networks with PyTorch Geometric, time series data handling with the `tsai` library, and quantization-aware training for model quantization. 🚀🔥
+
 
 ## **84. Custom Weight Initialization Strategies 🚀**
 
@@ -1129,10 +1215,11 @@ def custom_init_weights(module):
 
 # Apply custom initialization to the model
 model.apply(custom_init_weights)
-
 ```
+
 ## **85. Using `torch.utils.checkpoint` for Memory-Efficient Backpropagation 🧠🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Using torch.utils.checkpoint for Memory-Efficient Backpropagation
 from torch.utils.checkpoint import checkpoint
 
@@ -1140,16 +1227,18 @@ from torch.utils.checkpoint import checkpoint
 output = checkpoint(model, input_tensor)
 loss = criterion(output, target)
 loss.backward()
-
 ```
+
 ## **86. Bayesian Neural Networks with `pyro` Library 📚🔍**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Bayesian Neural Networks with pyro Library
 # Example: https://pyro.ai/examples/bayesian_regression.html
-
 ```
+
 ## **87. Using `einops` for Efficient Tensor Operations 🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Using einops for Efficient Tensor Operations
 from einops import rearrange, reduce
 
@@ -1157,35 +1246,43 @@ from einops import rearrange, reduce
 x = torch.randn(10, 3, 32, 32)
 x = rearrange(x, 'b c h w -> b (c h w)')
 x = reduce(x, 'b c -> b', 'mean')
-
 ```
+
 ## **88. Dynamic Learning Rate Schedulers with `torch.optim.lr_scheduler` 📈🔍**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Dynamic Learning Rate Schedulers with torch.optim.lr_scheduler
 from torch.optim.lr_scheduler import CosineAnnealingLR
 
 # Example: Cosine Annealing Learning Rate Scheduler
 scheduler = CosineAnnealingLR(optimizer, T_max=10)
-
 ```
+
 ## **89. Efficient Attention Mechanisms with `Axial-Attention` 🚀🔍**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Efficient Attention Mechanisms with Axial-Attention
 # Example: https://github.com/lucidrains/axial-attention
-
 ```
+
 ## **90. Federated Learning with `PySyft` and `PyTorch` 🌐🔍**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Federated Learning with PySyft and PyTorch
 # Example: https://github.com/OpenMined/PySyft
-
 ```
+
 ## **91. Working with Complex Numbers in PyTorch 📊🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Working with Complex Numbers in PyTorch
 z = torch.tensor([1 + 2j, 3 - 4j], dtype=torch.complex64)
-
 ```
+
+---
+
+These additions cover custom weight initialization, memory-efficient backpropagation with `torch.utils.checkpoint`, Bayesian Neural Networks with the `pyro` library, efficient tensor operations with `einops`, dynamic learning rate schedulers, efficient attention mechanisms with `Axial-Attention`, federated learning with `PySyft` and `PyTorch`, and working with complex numbers in PyTorch. 🚀🔥
+
 
 ## **92. Handling Imbalanced Datasets with `ImbalancedDatasetSampler` 🚧📊**
 
@@ -1196,24 +1293,27 @@ from torchsampler import ImbalancedDatasetSampler
 # Example: Use ImbalancedDatasetSampler with DataLoader
 sampler = ImbalancedDatasetSampler(dataset, callback_get_label=lambda dataset, idx: dataset[idx][1])
 dataloader = DataLoader(dataset, batch_size=64, sampler=sampler)
-
 ```
+
 ## **93. Custom Gradient Clipping with `torch.nn.utils.clip_grad_norm_` 🚀📊**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Custom Gradient Clipping with torch.nn.utils.clip_grad_norm_
 max_norm = 1.0
 parameters = model.parameters()
 torch.nn.utils.clip_grad_norm_(parameters, max_norm)
-
 ```
+
 ## **94. Training PyTorch Models on TPUs with `PyTorch-XLA` 🚀🌐**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Training PyTorch Models on TPUs with PyTorch-XLA
 # Example: https://github.com/pytorch/xla
-
 ```
+
 ## **95. Precision-Recall Curves for Model Evaluation 📊🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Precision-Recall Curves for Model Evaluation
 from sklearn.metrics import precision_recall_curve
 import matplotlib.pyplot as plt
@@ -1225,16 +1325,18 @@ plt.xlabel('Recall')
 plt.ylabel('Precision')
 plt.title('Precision-Recall Curve')
 plt.show()
-
 ```
+
 ## **96. Training Transformers with `transformers` Library 🤖🚀**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Training Transformers with transformers Library
 # Example: https://github.com/huggingface/transformers
-
 ```
+
 ## **97. Using `torchvision` for Object Detection Tasks 🖼️🔍**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Using torchvision for Object Detection Tasks
 import torchvision.transforms as T
 from torchvision.models.detection import FasterRCNN
@@ -1246,58 +1348,59 @@ model = FasterRCNN(pretrained=True)
 transform = T.Compose([T.ToTensor()])
 dataset = CocoDetection(root='path/to/coco', annFile='annotations.json', transform=transform)
 dataloader = DataLoader(dataset, batch_size=2, shuffle=True)
-
 ```
+
 ## **98. Handling Out-of-Memory Issues with `torch.utils.data.DataLoader` 🚀🧠**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Handling Out-of-Memory Issues with torch.utils.data.DataLoader
 # Example: Limiting the number of worker processes
 dataloader = DataLoader(dataset, batch_size=64, num_workers=2)
-
 ```
+
 ## **99. Reinforcement Learning with `Stable-Baselines3` 🎮🤖**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Reinforcement Learning with Stable-Baselines3
 # Example: https://github.com/DLR-RM/stable-baselines3
-
 ```
+
 ## **100. Applying Transfer Learning to Different Modalities 🚀🔄**
-```python<button class="flex ml-auto gizmo:ml-0 gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button>
+
+```python
 # Applying Transfer Learning to Different Modalities
 # Example: Transfer learning from vision to text or vice versa
-
 ```
-_____________________________________________________________________________________________
-These additions cover handling imbalanced datasets, custom gradient clipping, training on TPUs with PyTorch-XLA, precision-recall curves, training transformers with the `transformers` library, object detection with `torchvision`, handling out-of-memory issues with `torch.utils.data.DataLoader`, reinforcement learning with `Stable-Baselines3`, and applying transfer learning to different modalities. Feel free to explore these topics based on your specific use cases and interests! Happy coding with PyTorch! 🚀🔥
 
-_____________________________________________________________________________________________
+---
+
+These additions cover handling imbalanced datasets, custom gradient clipping, training on TPUs with PyTorch-XLA, precision-recall curves, training transformers with the `transformers` library, object detection with `torchvision`, handling out-of-memory issues with `torch.utils.data.DataLoader`, reinforcement learning with `Stable-Baselines3`, and applying transfer learning to different modalities. 🚀🔥
+
+----
 
 ## However, I can guide you on where to find relevant information for some of the topics:
 
+1. [Torch Basics](https://pytorch.org/tutorials/beginner/basics/intro.html)
+2. [Neural Network Basics](https://pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html)
+3. [Image Classification with CNNs](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html)
+4. [Transfer Learning](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
+5. [Recurrent Neural Networks (RNNs)](https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html)
+6. [Generative Adversarial Networks (GANs)](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html)
+7. [Natural Language Processing (NLP) with PyTorch](https://pytorch.org/tutorials/beginner/nlp/pytorch_tutorial.html)
+8. [Variational Autoencoders (VAEs)](https://pytorch.org/tutorials/beginner/generative_variational_autoencoder.html)
+9. [Hyperparameter Tuning with Optuna](https://optuna.readthedocs.io/en/stable/index.html)
+10. [Model Interpretability with Captum](https://captum.ai/tutorials)
+11. [Parallelizing Data Loading with DataLoader](https://pytorch.org/docs/stable/data.html)
+12. [Mixed Precision Training](https://pytorch.org/tutorials/recipes/recipes/mixed_precision.html)
+13. [Graph Neural Networks with PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/)
+14. [Handling Imbalanced Datasets with ImbalancedDatasetSampler](https://github.com/ufoym/imbalanced-dataset-sampler)
+15. [Using torch.utils.checkpoint for Memory-Efficient Backpropagation](https://pytorch.org/docs/stable/checkpoint.html)
+16. [Bayesian Neural Networks with Pyro](http://pyro.ai/examples/bayesian_regression.html)
+17. [Dynamic Learning Rate Schedulers](https://pytorch.org/docs/stable/optim.html#torch.optim.lr_scheduler)
+18. [Precision-Recall Curves](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+19. [Training PyTorch Models on TPUs with PyTorch-XLA](https://pytorch.org/xla/release/1.10/index.html)
+20. [Training Transformers with Hugging Face Transformers](https://huggingface.co/transformers/)
+21. [Object Detection with torchvision](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html)
+22. [Reinforcement Learning with Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3)
 
-- [Torch Basics](https://pytorch.org/tutorials/beginner/basics/intro.html)
-- [Neural Network Basics](https://pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html)
-- [Image Classification with CNNs](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html)
-- [Transfer Learning](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
-- [Recurrent Neural Networks (RNNs)](https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html)
-- [Generative Adversarial Networks (GANs)](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html)
-- [Natural Language Processing (NLP) with PyTorch](https://pytorch.org/tutorials/beginner/nlp/pytorch_tutorial.html)
-- [Variational Autoencoders (VAEs)](https://pytorch.org/tutorials/beginner/generative_variational_autoencoder.html)
-- [Hyperparameter Tuning with Optuna](https://optuna.readthedocs.io/en/stable/index.html)
-- [Model Interpretability with Captum](https://captum.ai/tutorials)
-- [Parallelizing Data Loading with DataLoader](https://pytorch.org/docs/stable/data.html)
-- [Mixed Precision Training](https://pytorch.org/tutorials/recipes/recipes/mixed_precision.html)
-- [Graph Neural Networks with PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/)
-- [Handling Imbalanced Datasets with ImbalancedDatasetSampler](https://github.com/ufoym/imbalanced-dataset-sampler)
-- [Using torch.utils.checkpoint for Memory-Efficient Backpropagation](https://pytorch.org/docs/stable/checkpoint.html)
-- [Bayesian Neural Networks with Pyro](http://pyro.ai/examples/bayesian_regression.html)
-- [Dynamic Learning Rate Schedulers](https://pytorch.org/docs/stable/optim.html#torch.optim.lr_scheduler)
-- [Precision-Recall Curves](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
-- [Training PyTorch Models on TPUs with PyTorch-XLA](https://pytorch.org/xla/release/1.10/index.html)
-- [Training Transformers with Hugging Face Transformers](https://huggingface.co/transformers/)
-- [Object Detection with torchvision](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html)
-- [Reinforcement Learning with Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3)
-
-
-------------------
-
+For topics without specific links, they may involve using standard PyTorch documentation, forums, or external resources based on the topic description. Feel free to explore these topics further through online searches and relevant documentation. Happy learning! 🚀🔍
